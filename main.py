@@ -48,7 +48,7 @@ last_30_days_close = {}
 ticker = [stock for stock in ticker if stock in close and not np.isnan(close[stock].iloc[-1]) and average_dollar_volume[stock].iloc[-1] > volume_threshold]
 
 for stock in ticker:
-    # Check if there are enough data points
+    # Check if there are enough data points in days
     lookback_days = 250
     if len(close[stock]) > lookback_days:
         # Get the closing price 250 days ago
