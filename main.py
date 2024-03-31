@@ -9,9 +9,9 @@ today = datetime.today()
 formatted_date = today.strftime('%d%m%y')
 
 sd = "2022-01-01"
-ed = "2024-01-13"
+ed = "2024-03-28"
 
-#calculate RSI
+#calculate RSI levels
 def calculate_rsi(data, window):
     delta = data.diff()
     up, down = delta.copy(), delta.copy()
@@ -41,8 +41,7 @@ volume_threshold = 25000
 if not os.path.exists('images'):
     os.makedirs('images')
 
-# Part 1: Find the trend of all stocks
-#look to filter further using volume analysis - gradual increase?
+# Part 1: Find the trend of all stocks look to filter further using volume analysis - gradual increase?
 trends = {}
 std_dev = {}
 last_30_days_close = {}
