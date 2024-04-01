@@ -8,7 +8,7 @@ from datetime import datetime
 today = datetime.today()
 formatted_date = today.strftime('%d%m%y')
 
-sd = "2022-01-01"
+sd = "2023-01-01"
 ed = "2024-04-01"
 
 #calculate RSI levels
